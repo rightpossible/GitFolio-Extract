@@ -1,34 +1,55 @@
 {
-  "name": "gitfolio-extract",
-  "version": "1.0.0",
+  "name": "@rightalx/gitfolio-extract",
+  "version": "1.0.1",
   "description": "Extract GitHub portfolio information into JSON format",
   "main": "dist/index.js",
+  "bin": {
+    "gitfolio-extract": "./dist/index.js"
+  },
   "type": "module",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc",
     "start": "tsx src/index.ts",
+    "prepublishOnly": "pnpm build",
     "extract": "tsx src/index.ts extract",
-    "configure": "tsx src/index.ts configure",
-    "dev": "tsx watch src/index.ts"
+    "configure": "tsx src/index.ts configure"
   },
-  "keywords": [
-    "github",
-    "portfolio",
-    "cli"
-  ],
-  "author": "",
-  "license": "MIT",
   "dependencies": {
     "@octokit/rest": "^20.0.2",
     "chalk": "^5.3.0",
     "commander": "^11.1.0",
     "conf": "^12.0.0",
-    "ora": "^8.0.1",
-    "open": "^9.1.0"
+    "open": "^10.0.3",
+    "ora": "^8.0.1"
   },
   "devDependencies": {
-    "@types/node": "^20.11.0",
+    "@types/node": "^20.11.5",
     "tsx": "^4.7.0",
     "typescript": "^5.3.3"
-  }
+  },
+  "keywords": [
+    "github",
+    "portfolio",
+    "cli",
+    "extract",
+    "developer"
+  ],
+  "author": "RightalX <hello@rightal.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rightpossible/gitfolio-extract.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rightpossible/gitfolio-extract/issues"
+  },
+  "homepage": "https://github.com/rightpossible/gitfolio-extract#readme"
 }
