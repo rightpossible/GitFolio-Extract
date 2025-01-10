@@ -1,7 +1,7 @@
 {
   "name": "@rightalx/gitfolio-extract",
-  "version": "1.0.1",
-  "description": "Extract GitHub portfolio information into JSON format",
+  "version": "1.0.2",
+  "description": "A CLI tool to extract GitHub repositories data for your portfolio website. Easily fetch repository details, stats, and READMEs in JSON format.",
   "main": "dist/index.js",
   "bin": {
     "gitfolio-extract": "./dist/index.js"
